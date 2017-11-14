@@ -20,9 +20,9 @@ class ElasticsearchCookbook::ServiceResource < Chef::Resource::LWRPBase
 
   # allow overridable init script
   attribute(:init_source, kind_of: String, default: 'initscript.erb')
-  attribute(:init_cookbook, kind_of: String, default: 'elasticsearch')
+  attribute(:init_cookbook, kind_of: String, default: 'front-elasticsearch')
 
   # allow overridable systemd unit
   attribute(:systemd_source, kind_of: String, default: 'systemd_unit.erb')
-  attribute(:systemd_cookbook, kind_of: String, default: 'elasticsearch')
+  attribute(:systemd_cookbook, kind_of: String, default: 'front-elasticsearch')
 end

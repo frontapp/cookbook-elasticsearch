@@ -19,16 +19,16 @@ class ElasticsearchCookbook::ConfigureResource < Chef::Resource::LWRPBase
   attribute(:path_bin,     kind_of: String, default: '/usr/share/elasticsearch/bin')
 
   attribute(:template_elasticsearch_env, kind_of: String, default: 'elasticsearch.in.sh.erb')
-  attribute(:cookbook_elasticsearch_env, kind_of: String, default: 'elasticsearch')
+  attribute(:cookbook_elasticsearch_env, kind_of: String, default: 'front-elasticsearch')
 
   attribute(:template_jvm_options, kind_of: String, default: 'jvm_options.erb')
-  attribute(:cookbook_jvm_options, kind_of: String, default: 'elasticsearch')
+  attribute(:cookbook_jvm_options, kind_of: String, default: 'front-elasticsearch')
 
   attribute(:template_elasticsearch_yml, kind_of: String, default: 'elasticsearch.yml.erb')
-  attribute(:cookbook_elasticsearch_yml, kind_of: String, default: 'elasticsearch')
+  attribute(:cookbook_elasticsearch_yml, kind_of: String, default: 'front-elasticsearch')
 
   attribute(:template_log4j2_properties, kind_of: String, default: 'log4j2.properties.erb')
-  attribute(:cookbook_log4j2_properties, kind_of: String, default: 'elasticsearch')
+  attribute(:cookbook_log4j2_properties, kind_of: String, default: 'front-elasticsearch')
 
   attribute(:logging, kind_of: Hash, default: {}.freeze)
   attribute(:java_home, kind_of: String, default: nil)
